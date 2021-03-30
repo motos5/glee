@@ -1,1 +1,12 @@
-body {}
+body {
+    color: $fd585858;
+	@extend %dmsans-400;
+	font-size: 16px;
+	line-height: 30px;
+}
+
+.container {
+	max-width: 1750px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
