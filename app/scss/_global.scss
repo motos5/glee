@@ -1,12 +1,23 @@
+html,
+body {
+	height: 100%;
+}
+
 body {
     color: $fd585858;
 	@extend %dmsans-400;
 	font-size: 16px;
 	line-height: 30px;
+	display: flex;
+	flex-direction: column;
+}
+
+.main{
+	flex-grow: 1;
 }
 
 .container {
-	max-width: 1750px;
+	max-width: 1230px;
 	margin: 0 auto;
-	padding: 0 15px;
+	padding: 0 30px;
 }
