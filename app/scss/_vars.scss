@@ -2,9 +2,12 @@
 $fd585858: #585858;
 $f436372: #436372;
 $f243f4d: #243f4d;
+$f7b7b7b: #7b7b7b;
 
 // General colors
-$cwfff: #fff;
+$cfff: #fff;
+$cfcd7b6: #fcd7b6;
+$ca3bbc8: #a3bbc8;
 
 %rubik-400 {
 	font-family: 'Rubik-Regular', sans-serif;
@@ -29,4 +32,9 @@ $cwfff: #fff;
 %dmsans-700 {
 	font-family: 'DMSans-Bold', sans-serif;
 	font-weight: 700;
+}
+
+%buttonFont {
+	@extend %rubik-500;
+	line-height: 1;
 }
