@@ -347,6 +347,8 @@
 		grid-template-rows: repeat(2, 1fr);
 		margin: 0 auto;
 		grid-gap: 30px;
+		margin-bottom: 180px;
+
 	}
 	&__item{
 		background-color: $cfff;
@@ -384,9 +386,14 @@
 	}
 	&__item-icons{
 		position: absolute;
-		width: 46px;
-		height: 46px;
-		margin-top: 70px;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		opacity: 0;
+	}
+	&__item-icons:hover{
+		opacity: 1;
 	}
 	&__item-search,
 	&__item-search:hover,
@@ -395,6 +402,9 @@
 	&__item-heart,
 	&__item-heart:hover{
 		position: absolute;
+		top: 200px;
+		left: 50%;
+		transform: translateX(-50%);
 		width: 46px;
 		height: 46px;
 		background-image: url('../images/icons/product-icons.svg');
@@ -418,6 +428,62 @@
 	}
 	&__item-heart:hover{
 		background-position: -122px -62px;
+	}
+}
+
+.product-offer{
+	display: flex;
+	justify-content: space-between;
+	&__item{
+		background-color: transparentize($cfcd7b6, 0.6);
+		display: flex;
+		padding: 100px 90px;
+	}
+	&__img{
+		margin-top: -194px;
+		&-left{
+			margin-left: 22px;
+			margin-right: 18px;
+		}
+		&-right{
+			margin-left: 32px;
+			margin-right: 52px;
+		}
+	}
+	&__content{
+		color: $f243f4d;
+		@extend %rubik-400
+	}
+	&__title{
+		@extend %dmsans-700;
+		font-size: 26px;
+		line-height: 1.23;
+		margin-bottom: 15px;
+	}
+	&__text{
+		line-height: 1.875;
+		max-width: 370px;
+		margin-bottom: 30px;
+	}
+	&__button{
+		font-size: 15px;
+		color: $f436372;
+		line-height: 0.8;
+		border: 1px solid $f436372;
+		border-radius: 5px;
+		padding: 23px 87px 25px 20px;
+		position: relative;
+		&:before{
+			content: '';
+			position: absolute;
+			background-image: url('../images/icons/arrowBtn-Dark.svg');
+			background-repeat: no-repeat;
+			width: 22px;
+			height: 9px;
+			top: 28px;
+			left: 138px;
+			position: absolute;
+		}
 	}
 }
 
