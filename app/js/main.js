@@ -7,5 +7,22 @@ $(function () {
         autoplaySpeed: 2000
     });
 
-    var mixer = mixitup('.products__items');
-});
+    const mixin1 = document.querySelector('.products__items');
+    const mixin2 = document.querySelector('.design-new__items');
+
+    if(mixin1){
+      mixitup('.products__items', {
+        selectors: {
+          control: '.filter1'
+        }
+      })
+    }
+    if(mixin2){
+      mixitup('.design-new__items', {
+        selectors: {
+          control: '.filter2'
+        }
+      })
+    }
+      
+  });

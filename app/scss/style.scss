@@ -338,6 +338,10 @@
 	}
 }
 
+.mixitup-control-active {
+	color: $f191919;
+}
+
 .products{
 	&__items{
 		display: grid;
@@ -437,6 +441,7 @@
 	&__item{
 		background-color: transparentize($cfcd7b6, 0.6);
 		display: flex;
+		align-items: center;
 		padding: 100px 90px;
 	}
 	&__img{
@@ -459,11 +464,12 @@
 		font-size: 26px;
 		line-height: 1.23;
 		margin-bottom: 15px;
+		max-width: 250px;
 	}
 	&__text{
 		line-height: 1.875;
 		max-width: 370px;
-		margin-bottom: 30px;
+		margin-bottom: 36px;
 	}
 	&__button{
 		font-size: 15px;
@@ -471,7 +477,7 @@
 		line-height: 0.8;
 		border: 1px solid $f436372;
 		border-radius: 5px;
-		padding: 23px 87px 25px 20px;
+		padding: 19px 94px 19px 12px;
 		position: relative;
 		&:before{
 			content: '';
@@ -480,11 +486,95 @@
 			background-repeat: no-repeat;
 			width: 22px;
 			height: 9px;
-			top: 28px;
+			top: 24px;
 			left: 138px;
 			position: absolute;
 		}
 	}
 }
+
+.design{
+	padding-top: 75px;
+	&__title{
+		margin-bottom: 30px;
+		text-align: center;
+	}
+	&__filter{
+		margin-bottom: 100px;
+	}
+	&__filter-btn{
+		background-color: transparent;
+		padding: 0;
+		border: none;
+		@extend %dmsans-700;
+		line-height: 1;
+		color: $f8b8b8b;
+		cursor: pointer;
+	}
+	&__filter-btn + .design__filter-btn{
+		margin-left: 28px;
+	}
+}
+
+.mixitup-control-active {
+	color: $f191919;
+}
+
+.design-new{
+	&__items{
+		display: grid;
+		min-height: 460px;
+		max-width: 1170px;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		margin: 0 auto 120px;
+		grid-gap: 30px;
+		// outline: 1px solid #000;
+	}
+	&__item{
+		position: relative;
+	}
+	&__title{
+		position: absolute;
+		width: 168px;
+		top: 43px;
+		left: 38px;
+		@extend %dmsans-700;
+		font-size: 20px;
+		color: $f1a1a1a;
+		line-height: 1.2;
+		// outline: 1px solid #f00;
+	}
+	&__style{
+		position: absolute;
+		top: 105px;
+		left: 38px;
+		@extend %dmsans-700;
+		color: $ca3bbc8;
+		line-height: 1.2;
+		// outline: 1px solid #ccc;
+	}
+	&__link{
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+}
+
+.video-presents{
+	background-color: #e5e5e5;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	&__popup{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 500px;
+	}
+}
+
 
 @import 'media';
