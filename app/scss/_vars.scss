@@ -7,6 +7,8 @@ $f414141: #414141;
 $f191919: #191919;
 $f8b8b8b: #8b8b8b;
 $f1a1a1a: #1a1a1a;
+$f262626: #262626;
+$f222933: #222933;
 
 // General colors
 $cfff: #fff;
@@ -35,6 +37,11 @@ $ca3bbc8: #a3bbc8;
 
 %dmsans-700 {
 	font-family: 'DMSans-Bold', sans-serif;
+	font-weight: 700;
+}
+
+%poppins-700 {
+	font-family: 'Poppins-Bold';
 	font-weight: 700;
 }
 
