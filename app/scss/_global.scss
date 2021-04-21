@@ -34,3 +34,45 @@ body {
 	justify-content: center;
 	align-items: center;
 }
+
+.partners{
+	max-width: 1170px;
+	padding: 0 86px 0 78px;
+	margin: 0 auto;
+	&__items{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+.breadcrumbs{
+	display: flex;
+	justify-content: center;
+	&__list{
+		display: flex;
+	}
+	&__item{
+		@extend %rubik-400;
+		font-size: 14px;
+		line-height: 1.7;
+		color: transparentize($f222933, .4);
+		position: relative;
+		padding-right: 16px;
+		&::after{
+			content: '/';
+			position: absolute;
+			right: 4px;
+			top: 0;
+		}
+		&:last-child{
+			padding-right: 0;
+			&::after{
+				display: none;
+			}
+		}
+	}
+	&__link{
+		color: inherit;
+	}
+}
