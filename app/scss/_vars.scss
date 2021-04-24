@@ -55,9 +55,24 @@ $ca3bbc8: #a3bbc8;
 	font-weight: 700;
 }
 
-%buttonFont {
-	@extend %rubik-500;
-	line-height: 1;
+%button {
+	display: inline-block;
+		background-color: $ca3bbc8;
+		color: $cfff;
+		@extend %rubik-500;
+		line-height: 1;
+		padding: 24px 100px 21px 28px;
+		position: relative;
+		&::before {
+			content: '';
+			background-image: url('../images/icons/arrowBtn.svg');
+			background-repeat: no-repeat;
+			width: 22px;
+			height: 9px;
+			top: 25px;
+			left: 160px;
+			position: absolute;
+		}
 }
 
 @function max($numbers...) {
