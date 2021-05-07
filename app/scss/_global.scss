@@ -87,3 +87,50 @@ body {
 	margin-top: 95px;
 }
 
+.pagination{
+	display: flex;
+	justify-content: center;
+	&.pagination--list{
+		justify-content: flex-start;
+	}
+	@extend %rubik-400;
+	&__list{
+		display: flex;
+	}
+	&__item{
+		color: $f243f4d;
+		width: 50px;
+		height: 50px;
+		background-color: #fff;
+		border: 1px solid $ca3bbc8;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-right: 15px;
+		&:hover{
+			background-color: $ca3bbc8;
+			color: #fff;
+		}
+		&.pagination__item--active{
+			background-color: $ca3bbc8;
+			color: #fff;
+		}
+	}
+	&__next{
+		color: $f243f4d;
+		height: 50px;
+		background-color: white;
+		border: 1px solid #a3bbc8;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0 18px;
+		&:hover{
+			background-color: $ca3bbc8;
+			color: #fff;
+		}
+	}
+	&__link{
+		color: inherit;
+	}
+}
