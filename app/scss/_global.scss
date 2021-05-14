@@ -28,6 +28,12 @@ body {
 	margin: 0 auto;
 }
 
+.container-small-slider{
+	max-width: 1230px;
+	padding: 0 20px;
+	margin: 0 auto;
+}
+
 .title{
 	@extend %dmsans-700;
 	font-size: 36px;

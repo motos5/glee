@@ -705,7 +705,7 @@
 .article{
 	margin: 120px auto 0;
 	background-color: #fff;
-	max-width: 1170px;
+	max-width: 1230px;
 	&__top{
 		display: flex;
 		justify-content: space-between;
@@ -1279,7 +1279,268 @@
 	}
 }
 
+.detalis{
+	padding-top: 120px;
+	margin-bottom: 120px;
+}
 
+.detalis-item{
+	&__inner{
+		display: flex;
+	}
+	&__slide{
+		width: 570px;
+		padding-right: 18px;
+
+	}
+	&__content{
+		width: 570px;
+		padding: 20px 0 0 16px;
+		margin-left: 30px;
+		@extend %rubik-400;
+		color: #333;
+
+	}
+	&__content-title{
+		font-size: 40px;
+		line-height: 1;
+		margin-bottom: 20px;
+	}
+	.star{
+		margin-bottom: 15px;
+	}
+	.jq-ry-container{
+		width: 104px !important;
+		.jq-ry-group-wrapper{
+			.jq-ry-group{
+				svg{
+					width: 16px;
+					height: 16px;
+				}
+			}
+		}
+	}
+	&__content-price{
+		font-size: 30px;
+		line-height: 45px;
+		margin-bottom: 20px;
+	}
+	&__content-text{
+		color: $f243f4d;
+		margin-bottom: 26px;
+		max-width: 532px;
+	}
+	&__content-form{
+		margin-bottom: 50px;
+	}
+	&__content-btn{
+		@extend %button;
+		margin-left: 14px;
+		border-radius: 5px;
+		@extend %rubik-400;
+		padding: 19px 50px 19px 50px;
+		border-width: 0;
+		cursor: pointer;
+		&::before {
+			display: none;
+		}
+	}
+}
+
+.detalis-tabs{
+	padding: 100px 0 0 162px;
+	margin-bottom: 36px;
+	&__item{
+		@extend %rubik-500;
+		color: $f243f4d;
+		font-size: 18px;
+		line-height: 40px;
+		height: 53px;
+		width: 240px;
+		background-color: transparentize($ca3bbc8, .8);
+		display: inline-block;
+		padding-top: 8px;
+		text-align: center;
+		& + .detalis-tabs__item{
+			margin-left: 10px;
+		}
+	}
+	&__item--active{
+		color: #fff;
+		background-color: transparentize($ca3bbc8, 0);
+	}
+	&__content-item{
+		display: none;
+		&.detalis-tabs__content-item--active{
+			display: block;
+		}
+	}
+	&__content-description{
+		@extend %rubik-400;
+		color: $f243f4d;
+	}
+}
+
+.content-info{
+	&__link{
+		color: inherit;
+	}
+}
+
+.product-slide{
+	display: flex;
+	.slick-vertical .slick-slide{
+		border: none;
+	}
+	&__thumb{
+		max-width: 138px;
+		max-height: 160px;
+		margin-right: 30px;
+	}
+	&__thumb-item{
+		max-height: 160px;
+		cursor: pointer;
+		border: 2px solid #f2f2f2;
+		background-color: #fefefe;
+		margin-bottom: 25px;
+		img{
+			display: inline-block;
+			max-width: 138px;
+			width: 100%;
+			max-height: 160px;
+			object-fit: contain;
+		}
+	}
+	&__big{
+		max-width: 387px;
+		max-height: 530px;
+	}
+	&__big-item{
+		width: 387px;
+		height: 530px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: 2px solid #f2f2f2;
+		background-color: #fefefe;
+	}
+}
+
+.related{
+	&__top{
+		margin-bottom: 65px;
+		position: relative;
+	}
+	.products__item-costs{
+		margin-top: 10px;
+	}
+	.slick-list {
+		padding: 0 12px;
+	}
+	.slick-slide {
+		width: 270px;
+		margin-left: 30px;
+	}
+	.slick-prev,
+	.slick-next{
+		padding: 0;
+		background-color: #fff;
+		width: 50px;
+		height: 50px;
+		border: 2px solid transparentize($ca3bbc8, .8);
+		position: absolute;
+		top: -110px;
+		right: 0;
+		cursor: pointer;
+		&:hover{
+
+		border: 2px solid transparentize($ca3bbc8, .0);
+		}
+		img{
+			position: absolute;
+			top: 20px;
+			left: 12px
+		}
+	}
+	.slick-next{
+		right: 70px;
+	}
+}
+
+
+
+// NUMBER INPUT=====================================
+.jq-number{
+	position: relative;
+	padding: 0;
+}
+
+.jq-number__field {
+    width: 153px;
+    border: 1px solid $ca3bbc8;
+	// transform: translateY(0px);
+}
+
+.jq-number__field input {
+	width: 151px;
+    height: 50px;
+    border: none;
+    outline: none;
+    background: none;
+	background-color: #fff;
+	text-align: center;
+	@extend %rubik-400;
+	font-size: 15px;
+	line-height: 46px;
+	text-transform: uppercase;
+	color: #333;
+}
+
+.jq-number__spin {
+    position: absolute;
+	cursor: pointer;
+	width: 50px;
+	height: 50px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.jq-number__spin.minus{
+    border-right: 1px solid $ca3bbc8;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0;
+}
+
+.jq-number__spin.plus{
+	border-left: 1px solid $ca3bbc8;
+	right: 0;
+}
+
+.jq-number__spin::after {
+    content: '';
+    position: absolute;
+    top: 24px;
+	left: 17px;
+    border: none;
+	width: 15px;
+	height: 3px;
+	background-image: url('../images/icons/minus.svg');
+	background-repeat: no-repeat;
+}
+
+.jq-number__spin.plus::after{
+	content: '';
+    position: absolute;
+    top: 17px;
+	left: 17px;
+    border: none;
+	width: 15px;
+	height: 15px;
+	background-image: url('../images/icons/plus.svg');
+	background-repeat: no-repeat;
+}
+// NUMBER INPUT=====================================
 
 // SELECTS==========================================
 .jq-selectbox{

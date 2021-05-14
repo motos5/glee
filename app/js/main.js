@@ -1,4 +1,14 @@
 $(function () {
+
+  $('.detalis-tabs__item').on('click', function(e){
+    e.preventDefault();
+    $('.detalis-tabs__item').removeClass('detalis-tabs__item--active');
+    $(this).addClass('detalis-tabs__item--active');
+    $('.detalis-tabs__content-item').removeClass('detalis-tabs__content-item--active');
+    $($(this).attr('href')).addClass('detalis-tabs__content-item--active');
+  });
+
+// Slick слайдер====================================
 	$('.top-slider__inner').slick({
         dots: true,
         arrows: false,
@@ -6,6 +16,32 @@ $(function () {
         autoplay: true,
         autoplaySpeed: 2000
     });
+
+  $('.product-slide__thumb').slick({
+    asNavFor: '.product-slide__big',
+    focusOnSelect: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    vertical: true,
+    draggable: false,
+  });
+  $('.product-slide__big').slick({
+    asNavFor: '.product-slide__thumb',
+    draggable: false,
+    arrows: false,
+    fade: true,
+  });
+
+  $('.related__items').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    variableWidth: true,
+    prevArrow:
+			'<button type="button" class="slick-prev"><img src="images/icons/next-arrow.svg" alt="prew arrow"></button>',
+		nextArrow:
+			'<button type="button" class="slick-next"><img src="images/icons/prew-arrow.svg" alt="next arrow"></button>',
+  });
+// Slick слайдер====================================
 
     const mixin1 = document.querySelector('.products__items');
     const mixin2 = document.querySelector('.design-new__items');
@@ -25,7 +61,7 @@ $(function () {
       })
     }
 
-    $('.filtr-style').styler({
+    $('.filtr-style, .detalis-item__content-input').styler({
       selectSearch: false,
     });
 
