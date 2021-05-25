@@ -1,0 +1,117 @@
+.article{
+	margin: 120px auto 0;
+	background-color: #fff;
+	max-width: 1230px;
+	&__top{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 46px;
+	}
+	&__view{
+		@extend %dmsans-700;
+		color: $f262626;
+		line-height: 1.2;
+		padding-right: 25px;
+		position: relative;
+		&::after{
+			content: '';
+			position: absolute;
+			width: 6px;
+			height: 10px;
+			top: 4px;
+			right: 0;
+			background-image: url('../images/icons/arrow-right.svg');
+			background-repeat: no-repeat;
+		}
+	}
+	&__items{
+		display: flex;
+		justify-content: space-between;
+		column-gap: 30px;
+	}
+	&__item{
+		background-color: #fff;
+		border-radius: 5px;
+		box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+		width: 370px;
+		min-height: 420px;
+	}
+	&__item-imgbox{
+		margin-bottom: 23px;
+		& img{
+			object-fit: cover;
+			width: 370px;
+
+		}
+	}
+	&__item-new{
+		@extend %poppins-700;
+		display: block;
+		font-size: 14px;
+		color: $cfff;
+		line-height: 1.4;
+		text-transform: uppercase;
+		background-color: #a3bbc8;
+		border-radius: 15px;
+		margin: -15px 0 0 28px;
+		width: 102px;
+		height: 30px;
+		padding: 5px 30px;
+		position: relative;
+	}
+	&__item-text{
+		height: 106px;
+		margin-left: 30px;
+		display: flex;
+		flex-direction: column;
+	}
+	&__item-title{
+		@extend %dmsans-500;
+		font-size: 18px;
+		line-height: 1.2;
+		max-width: 285px;
+		color: $f262626;
+	}
+}
+
+.item-info{
+	display: flex;
+	justify-content: space-between;
+	max-width: 220px;
+	@extend %rubik-400;
+	font-size: 12px;
+	text-transform: uppercase;
+	margin-top: auto;
+	
+	&__data{
+		color: $f222933;
+		position: relative;
+		padding-left: 16px;
+		&::before{
+			content: '';
+			position: absolute;
+			width: 11.1px;
+			height: 12px;
+			top: 8px;
+			left: 0;
+			background-image: url('../images/icons/calendar-dark.svg');
+			background-repeat: no-repeat;
+		}
+	}
+	&__author{
+		color: $f222933;
+		position: relative;
+		padding-left: 14px;
+		&::before{
+			content: '';
+			position: absolute;
+			width: 10.5px;
+			height: 12px;
+			top: 8px;
+			left: 0;
+			background-image: url('../images/icons/user-dark.svg');
+			background-repeat: no-repeat;
+		}
+	}
+}

@@ -1,0 +1,71 @@
+.top-slider {
+	background-color: $cfff;
+	&__inner {
+		background-color: $cfcd7b6;
+	}
+	&__item-inner {
+		background-image: url('../images/slider-elipse.png');
+		background-repeat: no-repeat;
+		background-position: right 10% center;
+		display: flex;
+		justify-content: space-around;
+		align-items: flex-end;
+		padding: 220px 0px 250px;
+	}
+	&__item-content {
+		margin-left: 10%;
+	}
+	&__item-title {
+		@extend %rubik-500;
+		font-size: 72px;
+		line-height: 1;
+		text-transform: uppercase;
+		color: $f243f4d;
+		max-width: 470px;
+		margin-bottom: 26px;
+	}
+	&__item-text {
+		@extend %rubik-400;
+		font-size: 18px;
+		line-height: 30px;
+		color: $f436372;
+		max-width: 366px;
+		margin-bottom: 34px;
+	}
+	&__item-button {
+		@extend %button;
+	}
+	&__item-img {
+		margin-right: 10%;
+	}
+}
+
+.slick-dots {
+	display: flex;
+	justify-content: center;
+	position: relative;
+	transform: translateY(-45px);
+	li {
+		margin: 0 6px;
+		button {
+			border: none;
+			padding: 0;
+			background-color: transparentize($cfff, 0.7);
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			@extend %rubik-500;
+			font-size: 10px;
+			line-height: 30px;
+			color: $f243f4d;
+		}
+		&.slick-active {
+			padding: 0;
+			background-color: $cfff;
+			border-radius: 50%;
+			@extend %rubik-500;
+			font-size: 10px;
+			color: $f243f4d;
+		}
+	}
+}

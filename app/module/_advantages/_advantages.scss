@@ -1,0 +1,42 @@
+.advantages {
+	&__items {
+		background-color: transparentize($cfcd7b6, 0.8);
+		padding: 45px 0;
+		display: flex;
+		justify-content: space-around;
+	}
+	&__item {
+		width: 370px;
+		padding-left: 80px;
+	}
+	&__item-title {
+		@extend %dmsans-700;
+		font-size: 18px;
+		line-height: 40px;
+		color: $f414141;
+		position: relative;
+		&::before {
+			content: '';
+			position: absolute;
+			background-repeat: no-repeat;
+			background-size: cover;
+			left: -80px;
+			top: 14px;
+		}
+		&.advantages__item-title-support::before {
+			background-image: url('../images/icons/advantages-support.svg');
+			width: 51px;
+			height: 53px;
+		}
+		&.advantages__item-title-deliery::before {
+			background-image: url('../images/icons/advantages-delivery.svg');
+			width: 54px;
+			height: 36px;
+		}
+		&.advantages__item-title-secure::before {
+			background-image: url('../images/icons/advantages-secure.svg');
+			width: 54px;
+			height: 52px;
+		}
+	}
+}

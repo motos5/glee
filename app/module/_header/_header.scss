@@ -1,0 +1,89 @@
+.header {
+	&__inner {
+		background-color: $cfff;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 48px 0 45px;
+	}
+}
+
+.menu {
+	&__list {
+		display: flex;
+	}
+	&__list-item + .menu__list-item {
+		padding-left: 34px;
+	}
+	&__list-link {
+		color: $f436372;
+		font-size: 15px;
+		line-height: 1;
+		@extend %rubik-500;
+	}
+}
+
+.user-nav {
+	display: flex;
+	&__circleBg {
+		width: 52px;
+		height: 52px;
+		background-color: transparentize(#a3bbc8, 0.8);
+		border-radius: 50%;
+		position: relative;
+	}
+	&__circleBg-img {
+		position: absolute;
+		top: 18px;
+		left: 18px;
+	}
+	&__ovalBg {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		width: 178px;
+		height: 52px;
+		background-color: $cfcd7b6;
+		border-radius: 52px;
+		margin-left: 21px;
+		position: relative;
+		text-align: center;
+		line-height: 18px;
+		font-size: 10px;
+		color: $f243f4d;
+	}
+	&__ovalBg-img {
+		padding: 16px;
+	}
+	&__num-heart {
+		position: absolute;
+		width: 16px;
+		height: 16px;
+		background-color: $cfff;
+		border-radius: 50%;
+		top: 11px;
+		left: 50px;
+	}
+	&__num-cars {
+		position: absolute;
+		width: 16px;
+		height: 16px;
+		background-color: $cfff;
+		border-radius: 50%;
+		top: 11px;
+		left: 137px;
+	}
+	&__button {
+		width: 52px;
+		height: 52px;
+		background-color: #a3bbc8;
+		border-radius: 50%;
+		margin-left: 18px;
+		position: relative;
+	}
+	&__button-img {
+		position: absolute;
+		top: 15px;
+		left: 16px;
+	}
+}
