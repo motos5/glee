@@ -1,5 +1,9 @@
 $(function () {
 
+  $('.header__btn').on('click', function(){
+    $('.menu').toggleClass('menu--active');
+  })
+
   $('.detalis-tabs__item').on('click', function(e){
     e.preventDefault();
     $('.detalis-tabs__item').removeClass('detalis-tabs__item--active');

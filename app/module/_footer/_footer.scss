@@ -95,3 +95,45 @@
 		}
 	}
 }
+
+@media (max-width: 960px){
+	.footer-top{
+		flex-wrap: wrap;
+		&__contacts{
+			width: 100%;
+			margin-bottom: 30px;
+		}
+		&__items{
+			margin-bottom: 30px;
+		}
+	}
+}
+
+@media (max-width: 640px){
+	.footer-top{
+		column-gap: 151px;
+		justify-content: center;
+		&__form{
+			max-width: 100%;
+			width: 100%;
+		}
+		&__form-email {
+			max-width: 100%;
+			width: 100%;			
+		}
+		&__form-btn{
+			width: 100%;
+			margin-top: 15px;
+		}
+	}
+	.footer-bottom{
+		flex-wrap: wrap;
+		&__copy{
+			margin-right: 40px;
+			order: 1;
+		}
+		&__menu{
+			margin-bottom: 20px;
+		}
+	}
+}
