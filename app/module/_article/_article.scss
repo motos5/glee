@@ -115,3 +115,15 @@
 		}
 	}
 }
+
+@media (max-width: 960px){
+	.article{
+		&__items{
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		&__item{
+			margin-bottom: 30px;
+		}
+	}
+}

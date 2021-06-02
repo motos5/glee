@@ -24,15 +24,13 @@
 .products{
 	&__items{
 		display: grid;
-		min-height: 800px;
 		max-width: 1170px;
 		grid-template-columns: repeat(4, 1fr);
-		grid-template-rows: repeat(2, 1fr);
+		grid-template-rows: auto;
 		margin: 0 auto;
 		grid-gap: 30px;
 		margin-bottom: 180px;
 		&.catalog-content__products-items{
-			min-height: 1230px;
 			max-width: 870px;
 			grid-template-columns: repeat(3, 1fr);
 			grid-template-rows: repeat(4, 1fr);
@@ -52,7 +50,7 @@
 		justify-content: center;
 		align-items: center;
 		position: relative;
-		min-height: 380px;
+		height: 380px;
 		margin-bottom: 10px;
 		&.products__item--list{
 			flex-direction: row;
@@ -290,4 +288,123 @@
 
 .mixitup-control-active {
 	color: $f191919;
+}
+
+@media (max-width: 1500px){
+	.product-offer{
+		&__item{
+			padding: 65px 80px 65px 0;
+		}
+		&__img{
+			max-width: 40%;
+		}
+		&__img-right{
+			margin-right: 32px;
+		}
+	}
+}
+
+@media (max-width: 1400px){
+	.products{
+		&__item{
+			padding: 0 20px;
+		}
+	}
+	.product-offer{
+		&__item{
+			padding: 65px 65px 65px 0;
+		}
+		&__img{
+			max-width: 35%;
+		}
+		&__img-right{
+			margin-right: 15px;
+			margin-left: 15px;
+		}
+	}
+}
+
+@media (max-width: 1100px){
+	.product-offer{
+		&__item{
+			padding: 35px 50px 35px 0;
+			align-items: flex-start;
+		}
+		&__img{
+			margin-top: -100px;
+		}
+		&__title{
+			font-size: 22px;
+		}
+		&__text{
+			font-size: 14px;
+		}
+		&__button{
+			padding: 10px 50px 10px 12px;
+			&::before{
+				top: 14px;
+				left: 100px;
+			}
+		}
+	}
+}
+
+@media (max-width: 960px){
+	.product-week{
+		&__filter{
+			margin-bottom: 50px;
+		}
+	}
+	.products{
+		&__items{
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: auto;
+			grid-gap: 15px;
+			margin-bottom: 50px;
+		}
+	}
+	.product-offer{
+		&__item{
+			padding: 35px 50px 35px 20px;
+			width: 100%;
+		}
+		&__img{
+			display: none;
+		}
+	}
+}
+
+@media (max-width: 640px){
+	.products{
+		&__items{
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+	.product-offer{
+		display: block;
+	}
+}
+
+@media (max-width: 480px){
+	.filter{
+		display: block;
+	}
+	.product-week{
+		&__filter-btn{
+			display: block;
+			padding: 10px 0;
+		}
+		&__filter-btn + .product-week__filter-btn{
+			margin-left: 0;
+		}
+	}
+	.products{
+		&__items{
+			grid-template-columns: repeat(1, 1fr);
+			max-width: 370px;
+		}
+		&__item{
+			margin-bottom: 0;
+		}
+	}
 }

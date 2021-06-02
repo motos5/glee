@@ -40,3 +40,48 @@
 		}
 	}
 }
+
+@media (max-width: 1400px){
+	.advantages{
+		&__items{
+			padding: 45px 30px;
+		}
+	}
+}
+
+@media (max-width: 1100px){
+	.advantages{
+		&__items{
+			padding-top: 80px;
+		}
+		&__item{
+			padding-left: 0;
+		}
+		&__item-title{
+			&::before{
+				top: -50px;
+				left: 0;
+			}
+		}
+	}
+}
+
+@media (max-width: 960px){
+	.advantages{
+		&__items{
+			padding-top: 45px;
+			display: block;
+		}
+		&__item{
+			padding-left: 80px;
+			width: 100%;
+			margin-bottom: 20px;
+		}
+		&__item-title{
+			&::before{
+				left: -80px;
+				top: 14px;
+			}
+		}
+	}
+}

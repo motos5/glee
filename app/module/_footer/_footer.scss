@@ -113,6 +113,10 @@
 	.footer-top{
 		column-gap: 151px;
 		justify-content: center;
+		padding-top: 60px;
+		&__title{
+			margin-bottom: 15px;
+		}
 		&__form{
 			max-width: 100%;
 			width: 100%;
