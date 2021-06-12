@@ -1,0 +1,20 @@
+.partners-content{
+	background-color: transparentize($cfcd7b6, 0.8);
+	padding: 83px 0;
+}
+
+@media (max-width: 960px){
+	.partners-box{
+		padding: 88px 0 88px 0;
+		margin-top: 0;
+	}
+	.partners{
+		&__items{
+			flex-wrap: wrap;
+			justify-content: center;
+			img{
+				margin: 25px 50px;
+			}
+		}
+	}
+}

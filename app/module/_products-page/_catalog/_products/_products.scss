@@ -1,0 +1,15 @@
+.catalog{
+	padding: 120px 0;
+	background-color: #fff;
+	&__inner{
+		display: flex;
+	}
+}
+
+@media (max-width: 1200px){
+	.catalog{
+		&__inner{
+			display: block;
+		}
+	}
+}

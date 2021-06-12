@@ -1,16 +1,19 @@
 $(function () {
+// Кнопка menu====================================
+$('.header__btn').on('click', function(){
+  $('.menu').toggleClass('menu--active');
+})
+// Кнопка menu====================================
 
-  $('.header__btn').on('click', function(){
-    $('.menu').toggleClass('menu--active');
-  })
-
-  $('.detalis-tabs__item').on('click', function(e){
-    e.preventDefault();
-    $('.detalis-tabs__item').removeClass('detalis-tabs__item--active');
+// Табы====================================
+$('.detalis-tabs__item').on('click', function(e){
+  e.preventDefault();
+  $('.detalis-tabs__item').removeClass('detalis-tabs__item--active');
     $(this).addClass('detalis-tabs__item--active');
     $('.detalis-tabs__content-item').removeClass('detalis-tabs__content-item--active');
     $($(this).attr('href')).addClass('detalis-tabs__content-item--active');
   });
+// Табы====================================
 
 // Slick слайдер====================================
 	$('.top-slider__inner').slick({
@@ -34,12 +37,45 @@ $(function () {
     draggable: false,
     arrows: false,
     fade: true,
+    responsive: [
+      {
+        breakpoint: 961,
+        settings: {
+          draggable: true,
+          dots: true,
+        }
+      },
+    ]
   });
 
   $('.related__items').slick({
     slidesToShow: 4,
     slidesToScroll: 1,
-    variableWidth: true,
+    dots: false,
+    responsive: [
+      {
+        breakpoint: 1101,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          draggable: true,
+        }
+      },
+      {
+        breakpoint: 961,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 641,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      },
+    ],
     prevArrow:
 			'<button type="button" class="slick-prev"><img src="images/icons/next-arrow.svg" alt="prew arrow"></button>',
 		nextArrow:
@@ -47,6 +83,7 @@ $(function () {
   });
 // Slick слайдер====================================
 
+// MixitUp несколько на одной странице====================================
     const mixin1 = document.querySelector('.products__items');
     const mixin2 = document.querySelector('.design-new__items');
 
@@ -64,11 +101,13 @@ $(function () {
         }
       })
     }
+// MixitUp несколько на одной странице====================================
 
     $('.filtr-style, .detalis-item__content-input').styler({
       selectSearch: false,
     });
-
+    
+// Кнопки переключения вида товаров в каталоге ====================================
     $('.catalog-content__btn').on('click', function(){
       $('.catalog-content__btn').removeClass('catalog-content__btn--active');
       $(this).addClass('catalog-content__btn--active');
@@ -84,7 +123,11 @@ $(function () {
       $('.products__items').removeClass('products__items--list');
       $('.products__item').removeClass('products__item--list');
       $('.pagination').removeClass('pagination--list');
-
+    });
+// Кнопки переключения вида товаров в каталоге ====================================
+    $('.catalog-content__filtr-btn').on('click', function(){
+      $('.catalog-content__filtr-btn').toggleClass('catalog-content__filtr-btn--active');
+      $('.main-filtr').slideToggle();
     });
 
     $(".catalog-price__input").ionRangeSlider({

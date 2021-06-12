@@ -145,9 +145,177 @@ body {
 	}
 }
 
+// NUMBER INPUT=====================================
+.jq-number{
+	position: relative;
+	padding: 0;
+}
+
+.jq-number__field {
+    width: 153px;
+    border: 1px solid $ca3bbc8;
+	// transform: translateY(0px);
+}
+
+.jq-number__field input {
+	width: 151px;
+    height: 50px;
+    border: none;
+    outline: none;
+    background: none;
+	background-color: #fff;
+	text-align: center;
+	@extend %rubik-400;
+	font-size: 15px;
+	line-height: 46px;
+	text-transform: uppercase;
+	color: #333;
+}
+
+.jq-number__spin {
+    position: absolute;
+	cursor: pointer;
+	width: 50px;
+	height: 50px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.jq-number__spin.minus{
+    border-right: 1px solid $ca3bbc8;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0;
+}
+
+.jq-number__spin.plus{
+	border-left: 1px solid $ca3bbc8;
+	right: 0;
+}
+
+.jq-number__spin::after {
+    content: '';
+    position: absolute;
+    top: 24px;
+	left: 17px;
+    border: none;
+	width: 15px;
+	height: 3px;
+	background-image: url('../images/icons/minus.svg');
+	background-repeat: no-repeat;
+}
+
+.jq-number__spin.plus::after{
+	content: '';
+    position: absolute;
+    top: 17px;
+	left: 17px;
+    border: none;
+	width: 15px;
+	height: 15px;
+	background-image: url('../images/icons/plus.svg');
+	background-repeat: no-repeat;
+}
+// NUMBER INPUT=====================================
+
+// SELECTS==========================================
+.jq-selectbox{
+	margin-left: 10px;
+}
+
+.jq-selectbox__select {
+	height: 32px;
+    padding: 0 60px 0 15px;
+	margin-left: 10px;
+    border-radius: 1px;
+	border: none;
+    background: transparent;
+    box-shadow: none;
+    text-shadow: none;
+	&:hover{
+		background: transparent;
+	} 
+}
+// SELECTS==========================================
+
+.jq-selectbox__trigger{
+	border-left: none;
+}
+
+.jq-selectbox__trigger-arrow {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 10px;
+    height: 5px;
+    border: none;
+	background-image: url('../images/icons/angle-down.svg');
+	background-repeat: no-repeat;
+}
+
+// RATEYO SETINGS
+.jq-ry-container{
+	padding: 0;
+}
+// RATEYO SETINGS+++++++++++++++
+
+// RANGE-SLIDER====================================
+.irs--flat{
+	height: 15px;
+}
+
+// LINES
+.irs--flat .irs-line {
+    top: 7px;
+    height: 2px;
+    background-color: transparentize($ca3bbc8, .44);
+    border-radius: 1px;
+}
+
+.irs--flat .irs-bar {
+    top: 7px;
+    height: 3px;
+    background-color: $ca3bbc8;
+}
+// LINES===============
+
+// RANGES
+.irs--flat .irs-handle {
+    top: 0px;
+    width: 15px;
+    height: 15px;
+    background-color: $ca3bbc8;
+}
+// RANGES=================
+
+// RANGES LINES
+.irs--flat .irs-handle>i:first-child{
+	display: none;
+}
+// RANGES LINES========
+
+// RANGE FLYING PRYCES
+.irs--flat .irs-from, .irs--flat .irs-to, .irs--flat .irs-single{
+	display: none;
+}
+// RANGE FLYING PRYCES=====
+
+// RANGE INSIDE PRICES
+.irs--flat .irs-min, .irs--flat .irs-max{
+	display: none;
+}
+// RANGE INSIDE PRICES======
+
 @media (max-width: 640px){
 	.title{
 		font-size: 28px;
+	}
+	.jq-selectbox{
+		margin-left: 0;
+	}
+	.jq-selectbox__select{
+		padding: 0 60px 0 0;
+		margin-left: 0;
 	}
 }
 
@@ -155,4 +323,5 @@ body {
 	.title{
 		font-size: 24px;
 	}
+	
 }
