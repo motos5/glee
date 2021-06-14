@@ -7,40 +7,86 @@ $f414141: #414141;
 $f191919: #191919;
 $f8b8b8b: #8b8b8b;
 $f1a1a1a: #1a1a1a;
+$f262626: #262626;
+$f222933: #222933;
 
 // General colors
 $cfff: #fff;
 $cfcd7b6: #fcd7b6;
 $ca3bbc8: #a3bbc8;
 
+%rubik-300 {
+	font-family: 'Rubik-Light';
+	font-weight: 300;
+}
+
 %rubik-400 {
-	font-family: 'Rubik-Regular', sans-serif;
+	font-family: 'Rubik-Regular';
 	font-weight: 400;
 }
 
 %rubik-500 {
-	font-family: 'Rubik-Medium', sans-serif;
+	font-family: 'Rubik-Medium';
 	font-weight: 500;
 }
 
+%rubik-700 {
+	font-family: 'Rubik-Bold';
+	font-weight: 700;
+}
+
 %dmsans-400 {
-	font-family: 'DMSans-Regular', sans-serif;
+	font-family: 'DMSans-Regular';
 	font-weight: 400;
 }
 
 %dmsans-500 {
-	font-family: 'DMSans-Medium', sans-serif;
+	font-family: 'DMSans-Medium';
 	font-weight: 500;
 }
 
 %dmsans-700 {
-	font-family: 'DMSans-Bold', sans-serif;
+	font-family: 'DMSans-Bold';
 	font-weight: 700;
 }
 
-%buttonFont {
-	@extend %rubik-500;
-	line-height: 1;
+%poppins-700 {
+	font-family: 'Poppins-Bold';
+	font-weight: 700;
+}
+
+%nunito-700 {
+	font-family: 'Nunito-Bold';
+	font-weight: 700;
+}
+
+%button {
+	display: inline-block;
+		background-color: $ca3bbc8;
+		color: $cfff;
+		@extend %rubik-500;
+		line-height: 1;
+		padding: 24px 100px 21px 28px;
+		position: relative;
+		&::before {
+			content: '';
+			background-image: url('../images/icons/arrowBtn.svg');
+			background-repeat: no-repeat;
+			width: 22px;
+			height: 9px;
+			top: 25px;
+			left: 160px;
+			position: absolute;
+		}
+}
+
+// Пряталка checkbox
+%checkbox-hidden{
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    position: absolute;
 }
 
 @function max($numbers...) {

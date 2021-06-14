@@ -1,0 +1,140 @@
+.mission{
+	padding: 120px 0;
+	@extend %rubik-400;
+	color: $f243f4d;
+	&__inner{
+		display: flex;
+	}
+	&__content{
+		max-width: 670px;
+		width: 100%;
+		margin-left: 30px;
+		padding: 80px 15px 90px;
+	}
+	&__work{
+		display: flex;
+		align-items: center;
+		margin-bottom: 45px;
+	}
+	&__work-old{
+		@extend %rubik-700;
+		font-size: 140px;
+		line-height: 32px;
+		color: $ca3bbc8;
+		margin-right: 30px;
+	}
+	&__work-text{
+		width: 83px;
+		height: 76px;
+	}
+	&__title{
+		@extend %rubik-700;
+		font-size: 36px;
+		line-height: 32px;
+		margin-bottom: 40px;
+	}
+	&__text{
+		margin-bottom: 80px;
+	}
+	&__items{
+		display: flex;
+		justify-content: space-between;
+	}
+	&__item{
+		display: block;
+		width: 150px;
+		@extend %dmsans-700;
+		font-size: 36px;
+		line-height: 38px;
+		padding-left: 60px;
+		position: relative;
+	}
+	&__item-projects::before,
+	&__item-revenue::before,
+	&__item-awards::before{
+		content: '';
+		position: absolute;
+		background-repeat: no-repeat;
+		left: 0;
+		top: 8px;
+	}
+	&__item-projects::before{
+		background-image: url('../images/icons/m-projects.svg');
+		width: 36px;
+		height: 38px;
+	}
+	&__item-revenue::before{
+		background-image: url('../images/icons/m-revenue.svg');
+		width: 43px;
+		height: 39px;
+	}
+	&__item-awards::before{
+		background-image: url('../images/icons/m-avards.svg');
+		width: 41px;
+		height: 40px;
+	}
+	&__item-text{
+		display: block;
+		color: #4c4c4c;
+		font-size: 16px;
+		line-height: 17px;
+		margin-top: 8px;
+	}
+}
+
+@media (max-width: 1300px){
+	.mission{
+		padding: 60px 0;
+		&__image{
+			max-width: 45%;
+			max-height: 575px;
+		}
+		&__title {
+			font-size: 32px;
+			line-height: 1;
+			margin-bottom: 20px;
+		}
+		&__text{
+			margin-bottom: 40px;
+		}
+	}
+}
+
+@media (max-width: 1100px){
+	.mission{
+		&__image{
+			display: none;
+		}
+		&__content{
+			max-width: 100%;
+			padding: 40px 0;
+			margin-left: 0;
+		}
+	}
+}
+
+@media (max-width: 640px){
+	.mission{
+		&__items{
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+		&__item{
+			margin: 0 15px;
+			margin-top: 30px;
+			
+		}
+		&__text{
+			margin-bottom: 10px;
+		}
+	}
+}
+
+@media (max-width: 480px){
+	.mission{
+		padding: 40px 0;
+		&__item{
+			margin: 25px 40px;
+		}
+	}
+}

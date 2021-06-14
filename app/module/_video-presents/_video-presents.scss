@@ -1,0 +1,12 @@
+.video-presents{
+	background-color: #e5e5e5;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	&__popup{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 500px;
+	}
+}

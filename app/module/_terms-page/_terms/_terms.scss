@@ -1,0 +1,49 @@
+.terms{
+	padding-top: 120px;
+	@extend %rubik-400;
+	
+	&__title{
+		@extend %rubik-500;
+		font-size: 24px;
+		line-height: 40px;
+		color: $f243f4d;
+		margin-bottom: 20px;
+	}
+	&__lists{
+		list-style-type: decimal-leading-zero;
+		margin-bottom: 70px;
+	}
+	&__list{
+		margin: 0 0 20px 28px;
+	}
+	&__text{
+		margin-bottom: 60px;
+	}
+}
+
+@media (max-width: 640px){
+	.terms{
+		padding-top: 60px;
+		&__title{
+			margin-bottom: 10px;
+		}
+		&__lists{
+			margin-bottom: 40px;
+		}
+		&__list{
+			margin: 0 0 10px 28px;
+		}
+		&__text{
+			margin-bottom: 30px;
+		}
+	}
+}
+
+@media (max-width: 480px){
+	.terms{
+		&__title{
+			font-size: 18px;
+			line-height: initial;
+		}
+	}
+}
